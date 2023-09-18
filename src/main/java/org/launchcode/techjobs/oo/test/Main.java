@@ -1,4 +1,4 @@
-package org.launchcode.techjobs.oo;
+package org.launchcode.techjobs.oo.test;
 public class Main {
 
     public static void main(String[] args) {
