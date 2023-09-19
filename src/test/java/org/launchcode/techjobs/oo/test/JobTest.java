@@ -1,13 +1,21 @@
 package org.launchcode.techjobs.oo.test;
-import org.junit.Test;
+import org.junit.jupiter.api.Assertions;
+import org.junit.jupiter.api.Test;
+import org.junit.jupiter.api.BeforeEach;
 
 import static org.junit.Assert.*;
 
 public class JobTest {
     //TODO: Create your unit tests here
+    private Job jobOne;
+    @BeforeEach
+    public void setUp () {
+        jobOne = new Job("Industrial Maintenance", new Employer("Browning"), new Location("Arnold"), new PositionType("Warehouse"), new CoreCompetency("Mechanical"));
+    }
+
     @Test
     public void testSettingJobId () {
-        Job jobOne = new Job();
+//        Job jobOne = new Job();
         Job jobTwo = new Job();
         assertNotEquals(jobOne.getId(),jobTwo.getId());
     }
@@ -29,8 +37,36 @@ public class JobTest {
 
     @Test
     public void testJobsForEquality () {
-        Job jobOne = new Job("Industrial Maintenance", new Employer("Browning"), new Location("Arnold"), new PositionType("Warehouse"), new CoreCompetency("Mechanical"));
         Job jobTwo = new Job("Industrial Maintenance", new Employer("Browning"), new Location("Arnold"), new PositionType("Warehouse"), new CoreCompetency("Mechanical"));
         assertFalse(jobOne.equals(jobTwo));
     }
+
+    @Test
+    public void testToStringStartsAndEndsWithNewLine () {
+        assertTrue(jobOne.toString().startsWith(System.lineSeparator()));
+        assertTrue(jobOne.toString().endsWith(System.lineSeparator()));
+
+    }
+
+    @Test
+    public void testToStringContainsCorrectLabelsAndData () {
+        String expected =
+                System.lineSeparator() + "ID: " + jobOne.getId() + System.lineSeparator() + "Name: "
+                        + jobOne.getName() + System.lineSeparator() + "Employer: " + jobOne.getEmployer()
+                        + System.lineSeparator() + "Location: " + jobOne.getLocation() + System.lineSeparator()
+                        + "Position Type: " +jobOne.getPositionType() + System.lineSeparator() + "Core Competency: "
+                        + jobOne.getCoreCompetency() + System.lineSeparator();
+        Assertions.assertEquals(expected, jobOne.toString());
+    }
+
+    @Test
+    public void testToStringHandlesEmptyField() {
+        Job jobWithSomeEmpty = new Job("Industrial Maintenance", new Employer(""), new Location("Arnold"), new PositionType("Warehouse"), new CoreCompetency("Mechanical"));
+        String result = jobWithSomeEmpty.toString();
+
+        // Checking if the employer part of the result has "Data not available"
+        Assertions.assertTrue(result.contains("Employer: Data not available"));
+    }
+
+
 }

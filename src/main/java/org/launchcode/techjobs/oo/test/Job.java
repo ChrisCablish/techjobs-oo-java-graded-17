@@ -33,6 +33,25 @@ public class Job {
         this.employer = employer;
     }
 
+    @Override
+    public String toString() {
+        int idRepresentation = (this.getId());
+        String employerRepresentation = (employer.toString().isEmpty()) ? "Data not available" : employer.toString();
+        String locationRepresentation = (location.toString().isEmpty()) ? "Data not available" : location.toString();
+        String positionRepresentation = (positionType.toString().isEmpty() ? "Data not available" : positionType.toString());
+        String competencyRepresentation = (coreCompetency.toString().isEmpty() ? "Data not available" : coreCompetency.toString());
+
+        return System.lineSeparator() +
+                "ID: " + idRepresentation + System.lineSeparator() +
+                "Name: " + name + System.lineSeparator() +
+                "Employer: " + employerRepresentation + System.lineSeparator() +
+                "Location: " + locationRepresentation + System.lineSeparator() +
+                "Position Type: " + positionRepresentation + System.lineSeparator() +
+                "Core Competency: " + competencyRepresentation
+                + System.lineSeparator();
+    }
+
+
     public Location getLocation() {
         return location;
     }
