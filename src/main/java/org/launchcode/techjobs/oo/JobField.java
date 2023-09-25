@@ -1,16 +1,16 @@
-package org.launchcode.techjobs.oo.test;
+package org.launchcode.techjobs.oo;
 
 import java.util.Objects;
 
 public class JobField {
 
     //fields
-    int id;
-    int nextId;
-    String value;
+    private int id;
+    private static int nextId = 1;
+    private String value;
 
     //constructors
-    public JobField () {
+    protected JobField () {
         id = nextId;
         nextId++;
     }
@@ -46,7 +46,7 @@ public class JobField {
     @Override
     public boolean equals(Object o) {
         if (this == o) return true;
-        if (!(o instanceof Location)) return false;
+        if (!(o instanceof JobField)) return false;
         JobField jobField = (JobField) o;
         return getId() == jobField.getId();
     }

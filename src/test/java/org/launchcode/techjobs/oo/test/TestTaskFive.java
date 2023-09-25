@@ -2,6 +2,7 @@ package org.launchcode.techjobs.oo.test;
 
 import mockit.Mocked;
 import org.junit.Test;
+import org.launchcode.techjobs.oo.Job;
 
 import java.lang.reflect.InvocationTargetException;
 import java.lang.reflect.Method;
@@ -15,7 +16,8 @@ import static org.junit.Assert.fail;
  */
 public class TestTaskFive extends AbstractTest {
 
-    @Mocked Job job;
+    @Mocked
+    Job job;
 
     @Test
     public void testTestToStringStartsAndEndsWithNewLineExists () throws ClassNotFoundException {

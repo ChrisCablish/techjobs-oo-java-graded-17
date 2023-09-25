@@ -1,4 +1,4 @@
-package org.launchcode.techjobs.oo.test;
+package org.launchcode.techjobs.oo;
 
 public class Location extends JobField {
     public Location(String value) {

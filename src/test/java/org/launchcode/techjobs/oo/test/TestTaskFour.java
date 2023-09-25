@@ -4,6 +4,7 @@ import mockit.Mocked;
 import mockit.Tested;
 import org.junit.Assert;
 import org.junit.Test;
+import org.launchcode.techjobs.oo.Job;
 
 import java.lang.reflect.Method;
 

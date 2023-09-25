@@ -1,6 +1,8 @@
 package org.launchcode.techjobs.oo.test;
 
 import org.junit.Test;
+import org.launchcode.techjobs.oo.Location;
+import org.launchcode.techjobs.oo.PositionType;
 
 import java.lang.reflect.Constructor;
 import java.lang.reflect.Field;

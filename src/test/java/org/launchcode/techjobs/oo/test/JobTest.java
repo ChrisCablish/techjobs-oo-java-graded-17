@@ -2,6 +2,7 @@ package org.launchcode.techjobs.oo.test;
 import org.junit.jupiter.api.Assertions;
 import org.junit.jupiter.api.Test;
 import org.junit.jupiter.api.BeforeEach;
+import org.launchcode.techjobs.oo.*;
 
 import static org.junit.Assert.*;
 
