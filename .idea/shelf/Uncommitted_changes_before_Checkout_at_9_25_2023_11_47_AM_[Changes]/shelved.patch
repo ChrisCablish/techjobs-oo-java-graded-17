@@ -1,0 +1,549 @@
+Index: src/main/java/org/launchcode/techjobs/oo/test/Location.java
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+diff --git a/src/main/java/org/launchcode/techjobs/oo/test/Location.java b/src/main/java/org/launchcode/techjobs/oo/Location.java
+rename from src/main/java/org/launchcode/techjobs/oo/test/Location.java
+rename to src/main/java/org/launchcode/techjobs/oo/Location.java
+--- a/src/main/java/org/launchcode/techjobs/oo/test/Location.java	(revision cffd095f8856f75fe6339a5b9cc0520ae991a7a5)
++++ b/src/main/java/org/launchcode/techjobs/oo/Location.java	(date 1695146379056)
+@@ -1,4 +1,4 @@
+-package org.launchcode.techjobs.oo.test;
++package org.launchcode.techjobs.oo;
+ 
+ public class Location extends JobField {
+     public Location(String value) {
+Index: src/main/java/org/launchcode/techjobs/oo/test/CoreCompetency.java
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+diff --git a/src/main/java/org/launchcode/techjobs/oo/test/CoreCompetency.java b/src/main/java/org/launchcode/techjobs/oo/CoreCompetency.java
+rename from src/main/java/org/launchcode/techjobs/oo/test/CoreCompetency.java
+rename to src/main/java/org/launchcode/techjobs/oo/CoreCompetency.java
+--- a/src/main/java/org/launchcode/techjobs/oo/test/CoreCompetency.java	(revision cffd095f8856f75fe6339a5b9cc0520ae991a7a5)
++++ b/src/main/java/org/launchcode/techjobs/oo/CoreCompetency.java	(date 1695146379063)
+@@ -1,4 +1,4 @@
+-package org.launchcode.techjobs.oo.test;
++package org.launchcode.techjobs.oo;
+ 
+ public class CoreCompetency extends JobField{
+     public CoreCompetency(String value) {
+Index: src/main/java/org/launchcode/techjobs/oo/test/Main.java
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+diff --git a/src/main/java/org/launchcode/techjobs/oo/test/Main.java b/src/main/java/org/launchcode/techjobs/oo/Main.java
+rename from src/main/java/org/launchcode/techjobs/oo/test/Main.java
+rename to src/main/java/org/launchcode/techjobs/oo/Main.java
+--- a/src/main/java/org/launchcode/techjobs/oo/test/Main.java	(revision cffd095f8856f75fe6339a5b9cc0520ae991a7a5)
++++ b/src/main/java/org/launchcode/techjobs/oo/Main.java	(date 1695658580656)
+@@ -1,19 +1,22 @@
+-package org.launchcode.techjobs.oo.test;
++package org.launchcode.techjobs.oo;
++
++import java.util.ArrayList;
++
+ public class Main {
+ 
+     public static void main(String[] args) {
+-//        Job job1 = new Job("Product tester", new Employer("ACME"), new Location("Desert"), new PositionType("Quality control"), new CoreCompetency("Persistence"));
+-//        Job job2 = new Job("Web Developer", new Employer("LaunchCode"), new Location("St. Louis"), new PositionType("Front-end developer"), new CoreCompetency("JavaScript"));
+-//        Job job3 = new Job("Ice cream tester", new Employer(""), new Location("Home"), new PositionType("UX"), new CoreCompetency("Tasting ability"));
+-//
+-//        ArrayList<Job> jobs = new ArrayList<>();
+-//        jobs.add(job1);
+-//        jobs.add(job2);
+-//        jobs.add(job3);
+-//
+-//        for (Job job : jobs){
+-//            System.out.println(job);
+-//        }
++        Job job1 = new Job("Product tester", new Employer("ACME"), new Location("Desert"), new PositionType("Quality control"), new CoreCompetency("Persistence"));
++        Job job2 = new Job("Web Developer", new Employer("LaunchCode"), new Location("St. Louis"), new PositionType("Front-end developer"), new CoreCompetency("JavaScript"));
++        Job job3 = new Job("Ice cream tester", new Employer(""), new Location("Home"), new PositionType("UX"), new CoreCompetency("Tasting ability"));
++
++        ArrayList<Job> jobs = new ArrayList<>();
++        jobs.add(job1);
++        jobs.add(job2);
++        jobs.add(job3);
++
++        for (Job job : jobs){
++            System.out.println(job);
++        }
+     }
+ 
+ }
+Index: src/main/java/org/launchcode/techjobs/oo/test/PositionType.java
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+diff --git a/src/main/java/org/launchcode/techjobs/oo/test/PositionType.java b/src/main/java/org/launchcode/techjobs/oo/PositionType.java
+rename from src/main/java/org/launchcode/techjobs/oo/test/PositionType.java
+rename to src/main/java/org/launchcode/techjobs/oo/PositionType.java
+--- a/src/main/java/org/launchcode/techjobs/oo/test/PositionType.java	(revision cffd095f8856f75fe6339a5b9cc0520ae991a7a5)
++++ b/src/main/java/org/launchcode/techjobs/oo/PositionType.java	(date 1695146378983)
+@@ -1,4 +1,4 @@
+-package org.launchcode.techjobs.oo.test;
++package org.launchcode.techjobs.oo;
+ 
+ public class PositionType extends JobField{
+     public PositionType(String value) {
+Index: src/main/java/org/launchcode/techjobs/oo/test/Employer.java
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+diff --git a/src/main/java/org/launchcode/techjobs/oo/test/Employer.java b/src/main/java/org/launchcode/techjobs/oo/Employer.java
+rename from src/main/java/org/launchcode/techjobs/oo/test/Employer.java
+rename to src/main/java/org/launchcode/techjobs/oo/Employer.java
+--- a/src/main/java/org/launchcode/techjobs/oo/test/Employer.java	(revision cffd095f8856f75fe6339a5b9cc0520ae991a7a5)
++++ b/src/main/java/org/launchcode/techjobs/oo/Employer.java	(date 1695146379077)
+@@ -1,4 +1,4 @@
+-package org.launchcode.techjobs.oo.test;
++package org.launchcode.techjobs.oo;
+ 
+ public class Employer extends JobField{
+     public Employer(String value) {
+Index: src/test/java/org/launchcode/techjobs/oo/test/TestTaskFive.java
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.BaseRevisionTextPatchEP
+<+>package org.launchcode.techjobs.oo.test;\r\n\r\nimport mockit.Mocked;\r\nimport org.junit.Test;\r\n\r\nimport java.lang.reflect.InvocationTargetException;\r\nimport java.lang.reflect.Method;\r\n\r\nimport static java.lang.System.lineSeparator;\r\nimport static org.junit.Assert.assertEquals;\r\nimport static org.junit.Assert.fail;\r\n\r\n/**\r\n * Created by LaunchCode\r\n */\r\npublic class TestTaskFive extends AbstractTest {\r\n\r\n    @Mocked Job job;\r\n\r\n    @Test\r\n    public void testTestToStringStartsAndEndsWithNewLineExists () throws ClassNotFoundException {\r\n        Class jobTestClass = getClassByName(\"JobTest\");\r\n        Method testToStringStartsAndEndsWithNewLineMethod = null;\r\n\r\n        try {\r\n            testToStringStartsAndEndsWithNewLineMethod = jobTestClass.getMethod(\"testToStringStartsAndEndsWithNewLine\");\r\n        } catch (NoSuchMethodException e) {\r\n            fail(\"JobTest does not have a testToStringStartsAndEndsWithNewLine method\");\r\n        }\r\n    }\r\n\r\n\r\n    @Test\r\n    public void testToStringStartsAndEndsWithNewLine() throws ClassNotFoundException, NoSuchMethodException, InvocationTargetException, InstantiationException, IllegalAccessException {\r\n        Job job = createJob(\"Web Developer\", \"LaunchCode\", \"StL\", \"Back-end developer\", \"Java\");\r\n        String firstChar = String.valueOf(job.toString().charAt(0));\r\n        String lastChar = String.valueOf(job.toString().charAt(job.toString().length()-1));\r\n        assertEquals(firstChar, lineSeparator());\r\n        assertEquals(lastChar, lineSeparator());\r\n    }\r\n\r\n    @Test\r\n    public void testTestToStringContainsCorrectLabelsAndDataExists () throws ClassNotFoundException {\r\n        Class jobTestClass = getClassByName(\"JobTest\");\r\n        Method testToStringContainsCorrectLabelsAndDataMethod = null;\r\n\r\n        try {\r\n            testToStringContainsCorrectLabelsAndDataMethod = jobTestClass.getMethod(\"testToStringContainsCorrectLabelsAndData\");\r\n        } catch (NoSuchMethodException e) {\r\n            fail(\"JobTest does not have a testToStringContainsCorrectLabelsAndData method\");\r\n        }\r\n    }\r\n\r\n    @Test\r\n    public void testToStringContainsCorrectLabelsAndData() throws ClassNotFoundException, InvocationTargetException, NoSuchMethodException, InstantiationException, IllegalAccessException, NoSuchFieldException {\r\n        Job job = createJob(\"Web Developer\", \"LaunchCode\", \"StL\", \"Back-end developer\", \"Java\");\r\n        String jobString = getJobString(job);\r\n        assertEquals(jobString, job.toString());\r\n    }\r\n\r\n    @Test\r\n    public void testTestToStringHandlesEmptyFieldExists () throws ClassNotFoundException {\r\n        Class jobTestClass = getClassByName(\"JobTest\");\r\n        Method testToStringHandlesEmptyField = null;\r\n\r\n        try {\r\n            testToStringHandlesEmptyField = jobTestClass.getMethod(\"testToStringHandlesEmptyField\");\r\n        } catch (NoSuchMethodException e) {\r\n            fail(\"JobTest does not have a testToStringHandlesEmptyField method\");\r\n        }\r\n    }\r\n\r\n    @Test\r\n    public void testToStringHandlesEmptyField() throws ClassNotFoundException, InvocationTargetException, NoSuchMethodException, InstantiationException, IllegalAccessException, NoSuchFieldException {\r\n        Job job = createJob(\"Web Developer\", \"\", \"StL\", \"\", \"Java\");\r\n        String jobString = getJobString(job);\r\n        assertEquals(jobString, job.toString());\r\n    }\r\n\r\n}\r\n
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+diff --git a/src/test/java/org/launchcode/techjobs/oo/test/TestTaskFive.java b/src/test/java/org/launchcode/techjobs/oo/test/TestTaskFive.java
+--- a/src/test/java/org/launchcode/techjobs/oo/test/TestTaskFive.java	(revision cffd095f8856f75fe6339a5b9cc0520ae991a7a5)
++++ b/src/test/java/org/launchcode/techjobs/oo/test/TestTaskFive.java	(date 1695146379049)
+@@ -2,6 +2,7 @@
+ 
+ import mockit.Mocked;
+ import org.junit.Test;
++import org.launchcode.techjobs.oo.Job;
+ 
+ import java.lang.reflect.InvocationTargetException;
+ import java.lang.reflect.Method;
+@@ -15,7 +16,8 @@
+  */
+ public class TestTaskFive extends AbstractTest {
+ 
+-    @Mocked Job job;
++    @Mocked
++    Job job;
+ 
+     @Test
+     public void testTestToStringStartsAndEndsWithNewLineExists () throws ClassNotFoundException {
+Index: src/test/java/org/launchcode/techjobs/oo/test/AbstractTest.java
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.BaseRevisionTextPatchEP
+<+>package org.launchcode.techjobs.oo.test;\r\n\r\nimport java.lang.reflect.Constructor;\r\nimport java.lang.reflect.Field;\r\nimport java.lang.reflect.InvocationTargetException;\r\nimport java.lang.reflect.Method;\r\n\r\n/**\r\n * Created by LaunchCode\r\n */\r\npublic class AbstractTest {\r\n\r\n    protected Class getClassByName(String className) throws ClassNotFoundException {\r\n        return Class.forName(\"org.launchcode.techjobs.oo.\" + className);\r\n    }\r\n\r\n    private Object initializeJobField(Class clazz, String value) throws NoSuchMethodException, InvocationTargetException, InstantiationException, IllegalAccessException {\r\n        Constructor constructor = clazz.getConstructor(String.class);\r\n        return constructor.newInstance(value);\r\n    }\r\n\r\n    protected Job createJob(String name, String employer, String location, String positionType, String coreCompetency) throws ClassNotFoundException, NoSuchMethodException, InvocationTargetException, InstantiationException, IllegalAccessException {\r\n        Class jobClass = getClassByName(\"Job\");\r\n        Constructor jobConstructor = jobClass.getConstructor(\r\n                String.class,\r\n                Employer.class,\r\n                Location.class,\r\n                PositionType.class,\r\n                CoreCompetency.class\r\n        );\r\n\r\n        return (Job) jobConstructor.newInstance(\r\n                name,\r\n                initializeJobField(Employer.class, employer),\r\n                initializeJobField(Location.class, location),\r\n                initializeJobField(PositionType.class, positionType),\r\n                initializeJobField(CoreCompetency.class, coreCompetency));\r\n    }\r\n\r\n    protected String getJobFieldString(Job job, String fieldName, Boolean substituteEmpty) throws InvocationTargetException, IllegalAccessException, NoSuchMethodException, ClassNotFoundException, NoSuchFieldException {\r\n        Class jobClass = getClassByName(\"Job\");\r\n        String value;\r\n\r\n        if (fieldName.equals(\"name\")) {\r\n            Field nameField = jobClass.getDeclaredField(fieldName);\r\n            nameField.setAccessible(true);\r\n            value = (String) nameField.get(job);\r\n        } else {\r\n            String fieldClassName = fieldName.substring(0, 1).toUpperCase() + fieldName.substring(1);\r\n            Class clazz = getClassByName(fieldClassName);\r\n            Field field = jobClass.getDeclaredField(fieldName);\r\n            field.setAccessible(true);\r\n            Object fieldValue = field.get(job);\r\n            Method getValueMethod = clazz.getMethod(\"getValue\");\r\n            value = (String) getValueMethod.invoke(fieldValue);\r\n        }\r\n        if (substituteEmpty && value == \"\") {\r\n            value = \"Data not available\";\r\n        }\r\n        return value;\r\n    }\r\n\r\n    protected int getJobId(Job job) throws ClassNotFoundException, NoSuchMethodException, InvocationTargetException, IllegalAccessException, NoSuchFieldException {\r\n        Class jobClass = getClassByName(\"Job\");\r\n        Field idField = jobClass.getDeclaredField(\"id\");\r\n        idField.setAccessible(true);\r\n        return idField.getInt(job);\r\n    }\r\n\r\n    protected String getJobString (Job job) throws NoSuchMethodException, ClassNotFoundException, InvocationTargetException, IllegalAccessException, NoSuchFieldException {\r\n        return String.format(\"\\nID: %d\\n\" +\r\n                        \"Name: %s\\n\" +\r\n                        \"Employer: %s\\n\" +\r\n                        \"Location: %s\\n\" +\r\n                        \"Position Type: %s\\n\" +\r\n                        \"Core Competency: %s\\n\", getJobId(job), getJobFieldString(job, \"name\", true), getJobFieldString(job, \"employer\", true), getJobFieldString(job, \"location\", true),\r\n                getJobFieldString(job, \"positionType\", true), getJobFieldString(job, \"coreCompetency\", true));\r\n    }\r\n\r\n}\r\n
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+diff --git a/src/test/java/org/launchcode/techjobs/oo/test/AbstractTest.java b/src/test/java/org/launchcode/techjobs/oo/test/AbstractTest.java
+--- a/src/test/java/org/launchcode/techjobs/oo/test/AbstractTest.java	(revision cffd095f8856f75fe6339a5b9cc0520ae991a7a5)
++++ b/src/test/java/org/launchcode/techjobs/oo/test/AbstractTest.java	(date 1695659687131)
+@@ -1,5 +1,7 @@
+ package org.launchcode.techjobs.oo.test;
+ 
++import org.launchcode.techjobs.oo.*;
++
+ import java.lang.reflect.Constructor;
+ import java.lang.reflect.Field;
+ import java.lang.reflect.InvocationTargetException;
+Index: src/test/java/org/launchcode/techjobs/oo/test/TestTaskThree.java
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.BaseRevisionTextPatchEP
+<+>package org.launchcode.techjobs.oo.test;\r\n\r\nimport mockit.Mocked;\r\nimport org.junit.Test;\r\n\r\nimport java.lang.reflect.Constructor;\r\nimport java.lang.reflect.Field;\r\nimport java.lang.reflect.InvocationTargetException;\r\nimport java.lang.reflect.Method;\r\n\r\nimport static org.junit.Assert.*;\r\n\r\n/**\r\n * Created by LaunchCode\r\n */\r\npublic class TestTaskThree extends AbstractTest {\r\n    @Mocked Job job;\r\n    @Test\r\n    public void testHasNoArgConstructor() throws ClassNotFoundException {\r\n        Class jobClass = getClassByName(\"Job\");\r\n        Constructor<Job> noArgConstructor = null;\r\n        try {\r\n            noArgConstructor = jobClass.getConstructor();\r\n        } catch (NoSuchMethodException e) {\r\n            fail(\"Job does not have a default/no-arg constructor\");\r\n        }\r\n\r\n    }\r\n\r\n    @Test\r\n    public void testNoArgConstructorInitializesIdField () throws ClassNotFoundException, NoSuchMethodException, InvocationTargetException, InstantiationException, IllegalAccessException, NoSuchFieldException {\r\n        Class jobClass = getClassByName(\"Job\");\r\n        Constructor<Job> noArgConstructor = jobClass.getConstructor();\r\n        Job job = noArgConstructor.newInstance();\r\n        Field idField = jobClass.getDeclaredField(\"id\");\r\n        idField.setAccessible(true);\r\n        assertTrue(idField.getInt(job) != 0);\r\n    }\r\n\r\n    @Test\r\n    public void testNoArgConstructorSetsUniqueIds () throws ClassNotFoundException, NoSuchMethodException, InvocationTargetException, InstantiationException, IllegalAccessException, NoSuchFieldException {\r\n        Class jobClass = getClassByName(\"Job\");\r\n        Constructor<Job> noArgConstructor = jobClass.getConstructor();\r\n        Job aJob = noArgConstructor.newInstance();\r\n        Job anotherJob = noArgConstructor.newInstance();\r\n        Field idField = jobClass.getDeclaredField(\"id\");\r\n        idField.setAccessible(true);\r\n        assertNotEquals(idField.getInt(aJob), idField.getInt(anotherJob));\r\n    }\r\n\r\n    @Test\r\n    public void testSecondConstructorArguments() throws ClassNotFoundException, InvocationTargetException, InstantiationException, IllegalAccessException {\r\n        Class jobClass = getClassByName(\"Job\");\r\n        Constructor<Job> noArgConstructor = null;\r\n        try {\r\n            noArgConstructor = jobClass.getConstructor(\r\n                    String.class,\r\n                    Employer.class,\r\n                    Location.class,\r\n                    PositionType.class,\r\n                    CoreCompetency.class);\r\n        } catch (NoSuchMethodException e) {\r\n            fail(\"Job does not have a second constructor with the appropriate arguments\");\r\n        }\r\n    }\r\n\r\n    @Test\r\n    public void testSecondConstructorInitializesProperties() throws ClassNotFoundException, InvocationTargetException, InstantiationException, IllegalAccessException, NoSuchMethodException, NoSuchFieldException {\r\n        Class jobClass = getClassByName(\"Job\");\r\n        Constructor<Job> secondConstructor = jobClass.getConstructor(\r\n                String.class,\r\n                Employer.class,\r\n                Location.class,\r\n                PositionType.class,\r\n                CoreCompetency.class);\r\n\r\n        Job aJob = createJob (\"Name\", \"Employer\", \"Location\", \"Position Type\", \"Core Competency\");\r\n\r\n        assertNotNull(getJobFieldString(aJob, \"name\", false));\r\n        assertNotNull(getJobFieldString(aJob, \"employer\", false));\r\n        assertNotNull(getJobFieldString(aJob, \"location\", false));\r\n        assertNotNull(getJobFieldString(aJob, \"positionType\", false));\r\n        assertNotNull(getJobFieldString(aJob, \"coreCompetency\", false));\r\n    }\r\n\r\n\r\n    @Test\r\n    public void testNameAccessors() throws ClassNotFoundException {\r\n        Class jobClass = getClassByName(\"Job\");\r\n\r\n        try {\r\n            jobClass.getMethod(\"getName\");\r\n        } catch (NoSuchMethodException e) {\r\n            fail(\"Job does not have a getName method\");\r\n        }\r\n\r\n        try {\r\n            jobClass.getMethod(\"setName\", String.class);\r\n        } catch (NoSuchMethodException e) {\r\n            fail(\"Job does not have a setName method\");\r\n        }\r\n    }\r\n\r\n    @Test\r\n    public void testEmployerAccessors() throws ClassNotFoundException {\r\n        Class jobClass = getClassByName(\"Job\");\r\n\r\n        try {\r\n            jobClass.getMethod(\"getEmployer\");\r\n        } catch (NoSuchMethodException e) {\r\n            fail(\"Job does not have a getEmployer method\");\r\n        }\r\n\r\n        try {\r\n            jobClass.getMethod(\"setEmployer\", Employer.class);\r\n        } catch (NoSuchMethodException e) {\r\n            fail(\"Job does not have a setEmployer method\");\r\n        }\r\n    }\r\n\r\n    @Test\r\n    public void testLocationAccessors() throws ClassNotFoundException {\r\n        Class jobClass = getClassByName(\"Job\");\r\n\r\n        try {\r\n            jobClass.getMethod(\"getLocation\");\r\n        } catch (NoSuchMethodException e) {\r\n            fail(\"Job does not have a getLocation method\");\r\n        }\r\n\r\n        try {\r\n            jobClass.getMethod(\"setLocation\", Location.class);\r\n        } catch (NoSuchMethodException e) {\r\n            fail(\"Job does not have a setLocation method\");\r\n        }\r\n    }\r\n\r\n    @Test\r\n    public void testPositionTypeAccessors() throws ClassNotFoundException {\r\n        Class jobClass = getClassByName(\"Job\");\r\n\r\n        try {\r\n            jobClass.getMethod(\"getPositionType\");\r\n        } catch (NoSuchMethodException e) {\r\n            fail(\"Job does not have a getPositionType method\");\r\n        }\r\n\r\n        try {\r\n            jobClass.getMethod(\"setPositionType\", PositionType.class);\r\n        } catch (NoSuchMethodException e) {\r\n            fail(\"Job does not have a setPositionType method\");\r\n        }\r\n    }\r\n\r\n    @Test\r\n    public void testCoreCompetencyAccessors() throws ClassNotFoundException {\r\n        Class jobClass = getClassByName(\"Job\");\r\n\r\n        try {\r\n            jobClass.getMethod(\"getCoreCompetency\");\r\n        } catch (NoSuchMethodException e) {\r\n            fail(\"Job does not have a getCoreCompetency method\");\r\n        }\r\n\r\n        try {\r\n            jobClass.getMethod(\"setCoreCompetency\", CoreCompetency.class);\r\n        } catch (NoSuchMethodException e) {\r\n            fail(\"Job does not have a setCoreCompetency method\");\r\n        }\r\n    }\r\n\r\n    @Test\r\n    public void testIdAccessors() throws ClassNotFoundException {\r\n        Class jobClass = getClassByName(\"Job\");\r\n\r\n        try {\r\n            jobClass.getMethod(\"getId\");\r\n        } catch (NoSuchMethodException e) {\r\n            fail(\"Job does not have a getId method\");\r\n        }\r\n\r\n        try {\r\n            jobClass.getMethod(\"setId\", int.class);\r\n        } catch (NoSuchMethodException e) {\r\n            // do nothing, we expect an exception\r\n        }\r\n    }\r\n\r\n    @Test\r\n    public void testHasNoNextIdAccessors() throws ClassNotFoundException {\r\n        Class jobClass = getClassByName(\"Job\");\r\n\r\n        try {\r\n            jobClass.getMethod(\"getNextId\");\r\n        } catch (NoSuchMethodException e) {\r\n            // do nothing, we expect an exception\r\n        }\r\n\r\n        try {\r\n            jobClass.getMethod(\"setNextId\", int.class);\r\n        } catch (NoSuchMethodException e) {\r\n            // do nothing, we expect an exception\r\n        }\r\n    }\r\n\r\n    @Test\r\n    public void testEqualsMethod() throws ClassNotFoundException, InvocationTargetException, NoSuchMethodException, IllegalAccessException, InstantiationException, NoSuchFieldException {\r\n        Job job = createJob(\r\n                \"Name\",\r\n                \"Employer\",\r\n                \"Location\",\r\n                \"Position Type\",\r\n                \"Core Competency\");\r\n        Job anotherJob = createJob(\r\n                \"Name\",\r\n                \"Employer\",\r\n                \"Location\",\r\n                \"Position Type\",\r\n                \"Core Competency\");\r\n\r\n        try {\r\n            Job.class.getDeclaredMethod(\"equals\", Object.class);\r\n        } catch (NoSuchMethodException e) {\r\n            fail(\"Job does not declare an equals method\");\r\n        }\r\n\r\n        assertTrue(job.equals(job));\r\n        assertFalse(job.equals(anotherJob));\r\n        assertNotEquals(getJobId(job), getJobId(anotherJob));\r\n\r\n        // Use reflection to make both objects have the same id and test\r\n        Field anotherJobIdField = Job.class.getDeclaredField(\"id\");\r\n        anotherJobIdField.setAccessible(true);\r\n        anotherJobIdField.set(anotherJob, getJobId(job));\r\n        assertTrue(job.equals(anotherJob));\r\n    }\r\n\r\n    @Test\r\n    public void testHashCodeMethod() throws ClassNotFoundException, InvocationTargetException, NoSuchMethodException, InstantiationException, IllegalAccessException, NoSuchFieldException {\r\n        Job job = createJob(\r\n                \"Name\",\r\n                \"Employer\",\r\n                \"Location\",\r\n                \"Position Type\",\r\n                \"Core Competency\");\r\n        Job anotherJob = createJob(\r\n                \"Name\",\r\n                \"Employer\",\r\n                \"Location\",\r\n                \"Position Type\",\r\n                \"Core Competency\");\r\n        Method hashCodeMethod = null;\r\n\r\n        try {\r\n            hashCodeMethod = Job.class.getDeclaredMethod(\"hashCode\");\r\n        } catch (NoSuchMethodException e) {\r\n            fail(\"Job does not declare an hashCode method\");\r\n        }\r\n\r\n        assertEquals(job.hashCode(), job.hashCode());\r\n        assertNotEquals(job.hashCode(), anotherJob.hashCode());\r\n\r\n        // Use reflection to make both objects have the same id and test\r\n        Field anotherJobIdField = Job.class.getDeclaredField(\"id\");\r\n        anotherJobIdField.setAccessible(true);\r\n        anotherJobIdField.set(anotherJob, getJobId(job));\r\n        assertEquals(hashCodeMethod.invoke(job), hashCodeMethod.invoke(anotherJob));\r\n    }\r\n\r\n}\r\n
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+diff --git a/src/test/java/org/launchcode/techjobs/oo/test/TestTaskThree.java b/src/test/java/org/launchcode/techjobs/oo/test/TestTaskThree.java
+--- a/src/test/java/org/launchcode/techjobs/oo/test/TestTaskThree.java	(revision cffd095f8856f75fe6339a5b9cc0520ae991a7a5)
++++ b/src/test/java/org/launchcode/techjobs/oo/test/TestTaskThree.java	(date 1695146379040)
+@@ -2,6 +2,7 @@
+ 
+ import mockit.Mocked;
+ import org.junit.Test;
++import org.launchcode.techjobs.oo.*;
+ 
+ import java.lang.reflect.Constructor;
+ import java.lang.reflect.Field;
+@@ -14,7 +15,8 @@
+  * Created by LaunchCode
+  */
+ public class TestTaskThree extends AbstractTest {
+-    @Mocked Job job;
++    @Mocked
++    Job job;
+     @Test
+     public void testHasNoArgConstructor() throws ClassNotFoundException {
+         Class jobClass = getClassByName("Job");
+Index: src/main/java/org/launchcode/techjobs/oo/test/JobField.java
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+diff --git a/src/main/java/org/launchcode/techjobs/oo/test/JobField.java b/src/main/java/org/launchcode/techjobs/oo/JobField.java
+rename from src/main/java/org/launchcode/techjobs/oo/test/JobField.java
+rename to src/main/java/org/launchcode/techjobs/oo/JobField.java
+--- a/src/main/java/org/launchcode/techjobs/oo/test/JobField.java	(revision cffd095f8856f75fe6339a5b9cc0520ae991a7a5)
++++ b/src/main/java/org/launchcode/techjobs/oo/JobField.java	(date 1695146379070)
+@@ -1,16 +1,16 @@
+-package org.launchcode.techjobs.oo.test;
++package org.launchcode.techjobs.oo;
+ 
+ import java.util.Objects;
+ 
+ public class JobField {
+ 
+     //fields
+-    int id;
+-    int nextId;
+-    String value;
++    private int id;
++    private static int nextId = 1;
++    private String value;
+ 
+     //constructors
+-    public JobField () {
++    protected JobField () {
+         id = nextId;
+         nextId++;
+     }
+@@ -46,7 +46,7 @@
+     @Override
+     public boolean equals(Object o) {
+         if (this == o) return true;
+-        if (!(o instanceof Location)) return false;
++        if (!(o instanceof JobField)) return false;
+         JobField jobField = (JobField) o;
+         return getId() == jobField.getId();
+     }
+Index: src/test/java/org/launchcode/techjobs/oo/test/JobTest.java
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.BaseRevisionTextPatchEP
+<+>package org.launchcode.techjobs.oo.test;\r\nimport org.junit.jupiter.api.Assertions;\r\nimport org.junit.jupiter.api.Test;\r\nimport org.junit.jupiter.api.BeforeEach;\r\n\r\nimport static org.junit.Assert.*;\r\n\r\npublic class JobTest {\r\n    //TODO: Create your unit tests here\r\n    private Job jobOne;\r\n    @BeforeEach\r\n    public void setUp () {\r\n        jobOne = new Job(\"Industrial Maintenance\", new Employer(\"Browning\"), new Location(\"Arnold\"), new PositionType(\"Warehouse\"), new CoreCompetency(\"Mechanical\"));\r\n    }\r\n\r\n    @Test\r\n    public void testSettingJobId () {\r\n//        Job jobOne = new Job();\r\n        Job jobTwo = new Job();\r\n        assertNotEquals(jobOne.getId(),jobTwo.getId());\r\n    }\r\n\r\n    @Test\r\n    public void testJobConstructorSetsAllFields() {\r\n        Job job = new Job(\"Product tester\", new Employer(\"ACME\"), new Location(\"Desert\"), new PositionType(\"Quality control\"), new CoreCompetency(\"Persistence\"));\r\n        assertTrue(job.getName() instanceof String);\r\n        assertEquals(job.getName(), \"Product tester\");\r\n        assertTrue(job.getEmployer() instanceof Employer);\r\n        assertEquals(job.getEmployer().toString(), \"ACME\");\r\n        assertTrue(job.getLocation() instanceof Location);\r\n        assertEquals(job.getLocation().toString(), \"Desert\");\r\n        assertTrue(job.getPositionType() instanceof PositionType);\r\n        assertEquals(job.getPositionType().toString(), \"Quality control\");\r\n        assertTrue(job.getCoreCompetency() instanceof CoreCompetency);\r\n        assertEquals(job.getCoreCompetency().toString(), \"Persistence\");\r\n    }\r\n\r\n    @Test\r\n    public void testJobsForEquality () {\r\n        Job jobTwo = new Job(\"Industrial Maintenance\", new Employer(\"Browning\"), new Location(\"Arnold\"), new PositionType(\"Warehouse\"), new CoreCompetency(\"Mechanical\"));\r\n        assertFalse(jobOne.equals(jobTwo));\r\n    }\r\n\r\n    @Test\r\n    public void testToStringStartsAndEndsWithNewLine () {\r\n        assertTrue(jobOne.toString().startsWith(System.lineSeparator()));\r\n        assertTrue(jobOne.toString().endsWith(System.lineSeparator()));\r\n\r\n    }\r\n\r\n    @Test\r\n    public void testToStringContainsCorrectLabelsAndData () {\r\n        String expected =\r\n                System.lineSeparator() + \"ID: \" + jobOne.getId() + System.lineSeparator() + \"Name: \"\r\n                        + jobOne.getName() + System.lineSeparator() + \"Employer: \" + jobOne.getEmployer()\r\n                        + System.lineSeparator() + \"Location: \" + jobOne.getLocation() + System.lineSeparator()\r\n                        + \"Position Type: \" +jobOne.getPositionType() + System.lineSeparator() + \"Core Competency: \"\r\n                        + jobOne.getCoreCompetency() + System.lineSeparator();\r\n        Assertions.assertEquals(expected, jobOne.toString());\r\n    }\r\n\r\n    @Test\r\n    public void testToStringHandlesEmptyField() {\r\n        Job jobWithSomeEmpty = new Job(\"Industrial Maintenance\", new Employer(\"\"), new Location(\"Arnold\"), new PositionType(\"Warehouse\"), new CoreCompetency(\"Mechanical\"));\r\n        String result = jobWithSomeEmpty.toString();\r\n\r\n        // Checking if the employer part of the result has \"Data not available\"\r\n        Assertions.assertTrue(result.contains(\"Employer: Data not available\"));\r\n    }\r\n\r\n\r\n}\r\n
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+diff --git a/src/test/java/org/launchcode/techjobs/oo/test/JobTest.java b/src/test/java/org/launchcode/techjobs/oo/test/JobTest.java
+--- a/src/test/java/org/launchcode/techjobs/oo/test/JobTest.java	(revision cffd095f8856f75fe6339a5b9cc0520ae991a7a5)
++++ b/src/test/java/org/launchcode/techjobs/oo/test/JobTest.java	(date 1695660204016)
+@@ -2,6 +2,7 @@
+ import org.junit.jupiter.api.Assertions;
+ import org.junit.jupiter.api.Test;
+ import org.junit.jupiter.api.BeforeEach;
++import org.launchcode.techjobs.oo.*;
+ 
+ import static org.junit.Assert.*;
+ 
+Index: src/main/java/org/launchcode/techjobs/oo/test/Job.java
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+diff --git a/src/main/java/org/launchcode/techjobs/oo/test/Job.java b/src/main/java/org/launchcode/techjobs/oo/Job.java
+rename from src/main/java/org/launchcode/techjobs/oo/test/Job.java
+rename to src/main/java/org/launchcode/techjobs/oo/Job.java
+--- a/src/main/java/org/launchcode/techjobs/oo/test/Job.java	(revision cffd095f8856f75fe6339a5b9cc0520ae991a7a5)
++++ b/src/main/java/org/launchcode/techjobs/oo/Job.java	(date 1695146378998)
+@@ -1,4 +1,4 @@
+-package org.launchcode.techjobs.oo.test;
++package org.launchcode.techjobs.oo;
+ 
+ import java.util.Objects;
+ 
+Index: src/test/java/org/launchcode/techjobs/oo/test/TestTaskTwo.java
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.BaseRevisionTextPatchEP
+<+>package org.launchcode.techjobs.oo.test;\r\n\r\nimport org.junit.Test;\r\n\r\nimport java.lang.reflect.Constructor;\r\nimport java.lang.reflect.Field;\r\nimport java.lang.reflect.InvocationTargetException;\r\nimport java.lang.reflect.Method;\r\n\r\nimport static org.junit.Assert.*;\r\n\r\n/**\r\n * Created by LaunchCode\r\n */\r\npublic class TestTaskTwo extends AbstractTest {\r\n\r\n    @Test\r\n    public void testSecondLocationConstructorExists() throws ClassNotFoundException {\r\n\r\n        Class theClass = getClassByName(\"Location\");\r\n        Constructor theConstructor = null;\r\n        try {\r\n            theConstructor = theClass.getConstructor(String.class);\r\n        } catch (NoSuchMethodException e) {\r\n            fail(\"Location does not have a constructor that takes a String parameter\");\r\n        }\r\n    }\r\n\r\n    @Test\r\n    public void testSecondLocationConstructorInitializesValue() throws ClassNotFoundException, InvocationTargetException, InstantiationException, IllegalAccessException {\r\n\r\n        Class theClass = getClassByName(\"Location\");\r\n        Constructor theConstructor = null;\r\n        try {\r\n            theConstructor = theClass.getConstructor(String.class);\r\n        } catch (NoSuchMethodException e) {\r\n            fail(\"Location does not have a constructor that takes a String parameter\");\r\n        }\r\n\r\n        String locValue = \"A location\";\r\n        Location newLocation = (Location) theConstructor.newInstance(locValue);\r\n        assertEquals(locValue, newLocation.getValue());\r\n    }\r\n\r\n    @Test\r\n    public void testSecondLocationConstructorInitializesId() throws NoSuchMethodException, InvocationTargetException, InstantiationException, IllegalAccessException, ClassNotFoundException {\r\n        Class locationClass = getClassByName(\"Location\");\r\n        Constructor secondConstructor = locationClass.getConstructor(String.class);\r\n        Location loc = (Location) secondConstructor.newInstance(\"a location\");\r\n        assertTrue(loc.getId() > 0);\r\n    }\r\n\r\n    @Test\r\n    public void testCoreCompetencyHasValueAccessors() throws ClassNotFoundException {\r\n        Class coreCompetencyClass = getClassByName(\"CoreCompetency\");\r\n\r\n        try {\r\n            coreCompetencyClass.getMethod(\"getValue\");\r\n        } catch (NoSuchMethodException e) {\r\n            fail(\"CoreCompetency does not have a getValue method\");\r\n        }\r\n\r\n        try {\r\n            coreCompetencyClass.getMethod(\"setValue\", String.class);\r\n        } catch (NoSuchMethodException e) {\r\n            fail(\"CoreCompetency does not have a setValue method\");\r\n        }\r\n    }\r\n\r\n    @Test\r\n    public void testCoreCompetencyHasIdGetter() throws ClassNotFoundException {\r\n        Class coreCompetencyClass = getClassByName(\"CoreCompetency\");\r\n\r\n        try {\r\n            coreCompetencyClass.getMethod(\"getId\");\r\n        } catch (NoSuchMethodException e) {\r\n            fail(\"CoreCompetency does not have a getId method\");\r\n        }\r\n    }\r\n\r\n    @Test\r\n    public void testCoreCompetencyHasNoIdSetter() throws ClassNotFoundException {\r\n        Class coreCompetencyClass = getClassByName(\"CoreCompetency\");\r\n\r\n        try {\r\n            coreCompetencyClass.getMethod(\"setId\", int.class);\r\n            fail(\"CoreCompetency should not have a setId method\");\r\n        } catch (NoSuchMethodException e) {\r\n            String asdf = \"\";\r\n        }\r\n    }\r\n\r\n    @Test\r\n    public void testPositionTypeToStringMethod()  {\r\n        String aValue = \"a position type\";\r\n        PositionType positionType = new PositionType(aValue);\r\n        assertEquals(aValue, positionType.toString());\r\n    }\r\n\r\n    @Test\r\n    public void testPositionTypeEqualsMethod() throws NoSuchMethodException, NoSuchFieldException, IllegalAccessException {\r\n        PositionType positionType = new PositionType(\"asdf\");\r\n        PositionType anotherPositionType = new PositionType(\"asdf\");\r\n\r\n        /*\r\n         * Look for .equals either on PositionType or its superclass.\r\n         * If looking on the superclass, ensure that the student has\r\n         * created the JobField base class and pulled the method up.\r\n         * */\r\n        try {\r\n            PositionType.class.getDeclaredMethod(\"equals\", Object.class);\r\n        } catch (NoSuchMethodException e) {\r\n            try {\r\n                Class jobFieldClass = getClassByName(\"JobField\");\r\n                Class superclass = PositionType.class.getSuperclass();\r\n                assertEquals(jobFieldClass, superclass);\r\n                superclass.getDeclaredMethod(\"equals\", Object.class);\r\n            } catch (NoSuchMethodException | ClassNotFoundException ex) {\r\n                fail(\"PositionType does not declare an equals method\");\r\n            }\r\n        }\r\n\r\n        assertTrue(positionType.equals(positionType));\r\n        assertFalse(positionType.equals(anotherPositionType));\r\n        assertNotEquals(positionType.getId(), anotherPositionType.getId());\r\n\r\n        // Use reflection to make both objects have the same id and test\r\n        Field anotherPositionTypeIdField;\r\n        try {\r\n            anotherPositionTypeIdField = PositionType.class.getDeclaredField(\"id\");\r\n        } catch (NoSuchFieldException e) {\r\n            anotherPositionTypeIdField = PositionType.class.getSuperclass().getDeclaredField(\"id\");\r\n        }\r\n        anotherPositionTypeIdField.setAccessible(true);\r\n        anotherPositionTypeIdField.set(anotherPositionType, positionType.getId());\r\n        assertTrue(positionType.equals(anotherPositionType));\r\n    }\r\n\r\n    @Test\r\n    public void testPositionTypeHashCodeMethod() throws ClassNotFoundException, NoSuchMethodException, InvocationTargetException, IllegalAccessException, NoSuchFieldException {\r\n        Class positionTypeClass = getClassByName(\"PositionType\");\r\n        PositionType positionType = new PositionType(\"asdf\");\r\n        PositionType anotherPositionType = new PositionType(\"asdf\");\r\n        Method hashCodeMethod = positionTypeClass.getMethod(\"hashCode\");\r\n\r\n        try {\r\n            PositionType.class.getDeclaredMethod(\"hashCode\");\r\n        } catch (NoSuchMethodException e) {\r\n            try {\r\n                Class jobFieldClass = getClassByName(\"JobField\");\r\n                Class superclass = PositionType.class.getSuperclass();\r\n                assertEquals(jobFieldClass, superclass);\r\n                superclass.getDeclaredMethod(\"hashCode\");\r\n            } catch (NoSuchMethodException | ClassNotFoundException ex) {\r\n                fail(\"PositionType does not declare an hashCode method\");\r\n            }\r\n        }\r\n\r\n        assertEquals(hashCodeMethod.invoke(positionType), hashCodeMethod.invoke(positionType));\r\n        assertNotEquals(hashCodeMethod.invoke(positionType), hashCodeMethod.invoke(anotherPositionType));\r\n\r\n        // Use reflection to make both objects have the same id and test\r\n        Field anotherPositionTypeIdField;\r\n        try {\r\n            anotherPositionTypeIdField = PositionType.class.getDeclaredField(\"id\");\r\n        } catch (NoSuchFieldException e) {\r\n            anotherPositionTypeIdField = PositionType.class.getSuperclass().getDeclaredField(\"id\");\r\n        }\r\n\r\n        anotherPositionTypeIdField.setAccessible(true);\r\n        anotherPositionTypeIdField.set(anotherPositionType, positionType.getId());\r\n        assertEquals(hashCodeMethod.invoke(positionType), hashCodeMethod.invoke(anotherPositionType));\r\n    }\r\n\r\n}\r\n\r\n
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+diff --git a/src/test/java/org/launchcode/techjobs/oo/test/TestTaskTwo.java b/src/test/java/org/launchcode/techjobs/oo/test/TestTaskTwo.java
+--- a/src/test/java/org/launchcode/techjobs/oo/test/TestTaskTwo.java	(revision cffd095f8856f75fe6339a5b9cc0520ae991a7a5)
++++ b/src/test/java/org/launchcode/techjobs/oo/test/TestTaskTwo.java	(date 1695146379024)
+@@ -1,6 +1,8 @@
+ package org.launchcode.techjobs.oo.test;
+ 
+ import org.junit.Test;
++import org.launchcode.techjobs.oo.Location;
++import org.launchcode.techjobs.oo.PositionType;
+ 
+ import java.lang.reflect.Constructor;
+ import java.lang.reflect.Field;
+Index: src/test/java/org/launchcode/techjobs/oo/test/TestTaskFour.java
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.BaseRevisionTextPatchEP
+<+>package org.launchcode.techjobs.oo.test;\r\n\r\nimport mockit.Mocked;\r\nimport mockit.Tested;\r\nimport org.junit.Assert;\r\nimport org.junit.Test;\r\n\r\nimport java.lang.reflect.Method;\r\n\r\nimport static org.junit.Assert.*;\r\n\r\n/**\r\n * Created by LaunchCode\r\n */\r\npublic class TestTaskFour extends AbstractTest {\r\n\r\n    @Tested\r\n    JobTest jobTest;\r\n    @Mocked\r\n    Job job;\r\n    @Mocked\r\n    Assert mockedAssert;\r\n\r\n    @Test\r\n    public void testTestSettingJobIdExists() throws ClassNotFoundException {\r\n        Class jobTestClass = getClassByName(\"JobTest\");\r\n        Method testSettingJobIdMethod = null;\r\n\r\n        try {\r\n            testSettingJobIdMethod = jobTestClass.getMethod(\"testSettingJobId\");\r\n        } catch (NoSuchMethodException e) {\r\n            fail(\"JobTest does not have a testSettingId method\");\r\n        }\r\n    }\r\n\r\n    @Test\r\n    public void testTestJobConstructorSetsAllFieldsExists() throws ClassNotFoundException {\r\n        Class jobTestClass = getClassByName(\"JobTest\");\r\n        Method testSettingJobIdMethod = null;\r\n\r\n        try {\r\n            testSettingJobIdMethod = jobTestClass.getMethod(\"testJobConstructorSetsAllFields\");\r\n        } catch (NoSuchMethodException e) {\r\n            fail(\"JobTest does not have a testJobConstructorSetsAllFields method\");\r\n        }\r\n    }\r\n\r\n    @Test\r\n    public void testTestJobsForEqualityExists() throws ClassNotFoundException {\r\n        Class jobTestClass = getClassByName(\"JobTest\");\r\n\r\n        try {\r\n            jobTestClass.getMethod(\"testJobsForEquality\");\r\n        } catch (NoSuchMethodException e) {\r\n            fail(\"JobTest does not have a testJobsForEquality method\");\r\n        }\r\n    }\r\n}\r\n
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+diff --git a/src/test/java/org/launchcode/techjobs/oo/test/TestTaskFour.java b/src/test/java/org/launchcode/techjobs/oo/test/TestTaskFour.java
+--- a/src/test/java/org/launchcode/techjobs/oo/test/TestTaskFour.java	(revision cffd095f8856f75fe6339a5b9cc0520ae991a7a5)
++++ b/src/test/java/org/launchcode/techjobs/oo/test/TestTaskFour.java	(date 1695660203996)
+@@ -4,6 +4,7 @@
+ import mockit.Tested;
+ import org.junit.Assert;
+ import org.junit.Test;
++import org.launchcode.techjobs.oo.Job;
+ 
+ import java.lang.reflect.Method;
+ 
+Index: build.gradle
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.BaseRevisionTextPatchEP
+<+>plugins {\r\n    id 'java'\r\n}\r\n\r\ngroup = 'org.launchcode'\r\nversion = '1.0-SNAPSHOT'\r\nsourceCompatibility = '17'\r\n\r\nrepositories {\r\n    mavenCentral()\r\n}\r\n\r\ndependencies {\r\n    implementation 'junit:junit:4.13.2'\r\n    testImplementation 'org.junit.jupiter:junit-jupiter:5.8.1'\r\n    testImplementation 'org.junit.jupiter:junit-jupiter:5.8.1'\r\n    testRuntimeOnly 'org.junit.vintage:junit-vintage-engine:5.8.1'\r\n    testImplementation 'org.testng:testng:7.1.0'\r\n    testImplementation 'org.jmockit:jmockit:1.49'\r\n}\r\n\r\ntest{\r\n    useJUnitPlatform()\r\n}
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+diff --git a/build.gradle b/build.gradle
+--- a/build.gradle	(revision cffd095f8856f75fe6339a5b9cc0520ae991a7a5)
++++ b/build.gradle	(date 1695660020798)
+@@ -12,6 +12,7 @@
+ 
+ dependencies {
+     implementation 'junit:junit:4.13.2'
++    implementation 'org.testng:testng:7.1.0'
+     testImplementation 'org.junit.jupiter:junit-jupiter:5.8.1'
+     testImplementation 'org.junit.jupiter:junit-jupiter:5.8.1'
+     testRuntimeOnly 'org.junit.vintage:junit-vintage-engine:5.8.1'
+Index: .idea/workspace.xml
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.BaseRevisionTextPatchEP
+<+><?xml version=\"1.0\" encoding=\"UTF-8\"?>\r\n<project version=\"4\">\r\n  <component name=\"AutoImportSettings\">\r\n    <option name=\"autoReloadType\" value=\"SELECTIVE\" />\r\n  </component>\r\n  <component name=\"ChangeListManager\">\r\n    <list default=\"true\" id=\"59ff47a6-ece6-4e2e-b777-6247aa1f282e\" name=\"Changes\" comment=\"complete task #5\">\r\n      <change beforePath=\"$PROJECT_DIR$/.idea/workspace.xml\" beforeDir=\"false\" afterPath=\"$PROJECT_DIR$/.idea/workspace.xml\" afterDir=\"false\" />\r\n      <change beforePath=\"$PROJECT_DIR$/src/main/java/org/launchcode/techjobs/oo/test/CoreCompetency.java\" beforeDir=\"false\" afterPath=\"$PROJECT_DIR$/src/main/java/org/launchcode/techjobs/oo/test/CoreCompetency.java\" afterDir=\"false\" />\r\n      <change beforePath=\"$PROJECT_DIR$/src/main/java/org/launchcode/techjobs/oo/test/Employer.java\" beforeDir=\"false\" afterPath=\"$PROJECT_DIR$/src/main/java/org/launchcode/techjobs/oo/test/Employer.java\" afterDir=\"false\" />\r\n      <change beforePath=\"$PROJECT_DIR$/src/main/java/org/launchcode/techjobs/oo/test/JobField.java\" beforeDir=\"false\" afterPath=\"$PROJECT_DIR$/src/main/java/org/launchcode/techjobs/oo/test/JobField.java\" afterDir=\"false\" />\r\n      <change beforePath=\"$PROJECT_DIR$/src/main/java/org/launchcode/techjobs/oo/test/Location.java\" beforeDir=\"false\" afterPath=\"$PROJECT_DIR$/src/main/java/org/launchcode/techjobs/oo/test/Location.java\" afterDir=\"false\" />\r\n      <change beforePath=\"$PROJECT_DIR$/src/main/java/org/launchcode/techjobs/oo/test/PositionType.java\" beforeDir=\"false\" afterPath=\"$PROJECT_DIR$/src/main/java/org/launchcode/techjobs/oo/test/PositionType.java\" afterDir=\"false\" />\r\n    </list>\r\n    <option name=\"SHOW_DIALOG\" value=\"false\" />\r\n    <option name=\"HIGHLIGHT_CONFLICTS\" value=\"true\" />\r\n    <option name=\"HIGHLIGHT_NON_ACTIVE_CHANGELIST\" value=\"false\" />\r\n    <option name=\"LAST_RESOLUTION\" value=\"IGNORE\" />\r\n  </component>\r\n  <component name=\"ExternalProjectsData\">\r\n    <projectState path=\"$PROJECT_DIR$\">\r\n      <ProjectState />\r\n    </projectState>\r\n  </component>\r\n  <component name=\"ExternalProjectsManager\">\r\n    <system id=\"GRADLE\">\r\n      <state>\r\n        <task path=\"$PROJECT_DIR$\">\r\n          <activation />\r\n        </task>\r\n        <projects_view />\r\n      </state>\r\n    </system>\r\n  </component>\r\n  <component name=\"FileTemplateManagerImpl\">\r\n    <option name=\"RECENT_TEMPLATES\">\r\n      <list>\r\n        <option value=\"Class\" />\r\n      </list>\r\n    </option>\r\n  </component>\r\n  <component name=\"Git.Settings\">\r\n    <option name=\"RECENT_BRANCH_BY_REPOSITORY\">\r\n      <map>\r\n        <entry key=\"$PROJECT_DIR$\" value=\"testing\" />\r\n      </map>\r\n    </option>\r\n    <option name=\"RECENT_GIT_ROOT_PATH\" value=\"$PROJECT_DIR$\" />\r\n  </component>\r\n  <component name=\"MarkdownSettingsMigration\">\r\n    <option name=\"stateVersion\" value=\"1\" />\r\n  </component>\r\n  <component name=\"ProjectColorInfo\">{\r\n  &quot;associatedIndex&quot;: 3\r\n}</component>\r\n  <component name=\"ProjectId\" id=\"2Qn6e2NCqVj233XTVZ3RW2TzDBN\" />\r\n  <component name=\"ProjectLevelVcsManager\" settingsEditedManually=\"true\" />\r\n  <component name=\"ProjectViewState\">\r\n    <option name=\"hideEmptyMiddlePackages\" value=\"true\" />\r\n    <option name=\"showLibraryContents\" value=\"true\" />\r\n  </component>\r\n  <component name=\"PropertiesComponent\">{\r\n  &quot;keyToString&quot;: {\r\n    &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,\r\n    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,\r\n    &quot;SHARE_PROJECT_CONFIGURATION_FILES&quot;: &quot;true&quot;,\r\n    &quot;git-widget-placeholder&quot;: &quot;main&quot;,\r\n    &quot;last_opened_file_path&quot;: &quot;C:/Users/chris/Documents/dev/LaunchCode/techjobs-oo-java-graded-17&quot;\r\n  }\r\n}</component>\r\n  <component name=\"RunManager\" selected=\"Gradle.JobTest\">\r\n    <configuration name=\"JobTest\" type=\"GradleRunConfiguration\" factoryName=\"Gradle\" temporary=\"true\">\r\n      <ExternalSystemSettings>\r\n        <option name=\"executionName\" />\r\n        <option name=\"externalProjectPath\" value=\"$PROJECT_DIR$\" />\r\n        <option name=\"externalSystemIdString\" value=\"GRADLE\" />\r\n        <option name=\"scriptParameters\" value=\"\" />\r\n        <option name=\"taskDescriptions\">\r\n          <list />\r\n        </option>\r\n        <option name=\"taskNames\">\r\n          <list>\r\n            <option value=\":test\" />\r\n            <option value=\"--tests\" />\r\n            <option value=\"&quot;org.launchcode.techjobs.oo.test.JobTest&quot;\" />\r\n          </list>\r\n        </option>\r\n        <option name=\"vmOptions\" />\r\n      </ExternalSystemSettings>\r\n      <ExternalSystemDebugServerProcess>false</ExternalSystemDebugServerProcess>\r\n      <ExternalSystemReattachDebugProcess>true</ExternalSystemReattachDebugProcess>\r\n      <DebugAllEnabled>false</DebugAllEnabled>\r\n      <RunAsTest>true</RunAsTest>\r\n      <method v=\"2\" />\r\n    </configuration>\r\n    <configuration name=\"JobTest.testJobsForEquality\" type=\"GradleRunConfiguration\" factoryName=\"Gradle\" temporary=\"true\">\r\n      <ExternalSystemSettings>\r\n        <option name=\"executionName\" />\r\n        <option name=\"externalProjectPath\" value=\"$PROJECT_DIR$\" />\r\n        <option name=\"externalSystemIdString\" value=\"GRADLE\" />\r\n        <option name=\"scriptParameters\" value=\"\" />\r\n        <option name=\"taskDescriptions\">\r\n          <list />\r\n        </option>\r\n        <option name=\"taskNames\">\r\n          <list>\r\n            <option value=\":test\" />\r\n            <option value=\"--tests\" />\r\n            <option value=\"&quot;org.launchcode.techjobs.oo.test.JobTest.testJobsForEquality&quot;\" />\r\n          </list>\r\n        </option>\r\n        <option name=\"vmOptions\" />\r\n      </ExternalSystemSettings>\r\n      <ExternalSystemDebugServerProcess>false</ExternalSystemDebugServerProcess>\r\n      <ExternalSystemReattachDebugProcess>true</ExternalSystemReattachDebugProcess>\r\n      <DebugAllEnabled>false</DebugAllEnabled>\r\n      <RunAsTest>true</RunAsTest>\r\n      <method v=\"2\" />\r\n    </configuration>\r\n    <configuration name=\"JobTest.testSettingJobId\" type=\"GradleRunConfiguration\" factoryName=\"Gradle\" temporary=\"true\">\r\n      <ExternalSystemSettings>\r\n        <option name=\"executionName\" />\r\n        <option name=\"externalProjectPath\" value=\"$PROJECT_DIR$\" />\r\n        <option name=\"externalSystemIdString\" value=\"GRADLE\" />\r\n        <option name=\"scriptParameters\" value=\"\" />\r\n        <option name=\"taskDescriptions\">\r\n          <list />\r\n        </option>\r\n        <option name=\"taskNames\">\r\n          <list>\r\n            <option value=\":test\" />\r\n            <option value=\"--tests\" />\r\n            <option value=\"&quot;org.launchcode.techjobs.oo.test.JobTest.testSettingJobId&quot;\" />\r\n          </list>\r\n        </option>\r\n        <option name=\"vmOptions\" />\r\n      </ExternalSystemSettings>\r\n      <ExternalSystemDebugServerProcess>false</ExternalSystemDebugServerProcess>\r\n      <ExternalSystemReattachDebugProcess>true</ExternalSystemReattachDebugProcess>\r\n      <DebugAllEnabled>false</DebugAllEnabled>\r\n      <RunAsTest>true</RunAsTest>\r\n      <method v=\"2\" />\r\n    </configuration>\r\n    <configuration name=\"JobTest.testToStringContainsCorrectLabelsAndData\" type=\"GradleRunConfiguration\" factoryName=\"Gradle\" temporary=\"true\">\r\n      <ExternalSystemSettings>\r\n        <option name=\"executionName\" />\r\n        <option name=\"externalProjectPath\" value=\"$PROJECT_DIR$\" />\r\n        <option name=\"externalSystemIdString\" value=\"GRADLE\" />\r\n        <option name=\"scriptParameters\" value=\"\" />\r\n        <option name=\"taskDescriptions\">\r\n          <list />\r\n        </option>\r\n        <option name=\"taskNames\">\r\n          <list>\r\n            <option value=\":test\" />\r\n            <option value=\"--tests\" />\r\n            <option value=\"&quot;org.launchcode.techjobs.oo.test.JobTest.testToStringContainsCorrectLabelsAndData&quot;\" />\r\n          </list>\r\n        </option>\r\n        <option name=\"vmOptions\" />\r\n      </ExternalSystemSettings>\r\n      <ExternalSystemDebugServerProcess>false</ExternalSystemDebugServerProcess>\r\n      <ExternalSystemReattachDebugProcess>true</ExternalSystemReattachDebugProcess>\r\n      <DebugAllEnabled>false</DebugAllEnabled>\r\n      <RunAsTest>true</RunAsTest>\r\n      <method v=\"2\" />\r\n    </configuration>\r\n    <configuration name=\"JobTest.testToStringHandlesEmptyField\" type=\"GradleRunConfiguration\" factoryName=\"Gradle\" temporary=\"true\">\r\n      <ExternalSystemSettings>\r\n        <option name=\"executionName\" />\r\n        <option name=\"externalProjectPath\" value=\"$PROJECT_DIR$\" />\r\n        <option name=\"externalSystemIdString\" value=\"GRADLE\" />\r\n        <option name=\"scriptParameters\" value=\"\" />\r\n        <option name=\"taskDescriptions\">\r\n          <list />\r\n        </option>\r\n        <option name=\"taskNames\">\r\n          <list>\r\n            <option value=\":test\" />\r\n            <option value=\"--tests\" />\r\n            <option value=\"&quot;org.launchcode.techjobs.oo.test.JobTest.testToStringHandlesEmptyField&quot;\" />\r\n          </list>\r\n        </option>\r\n        <option name=\"vmOptions\" />\r\n      </ExternalSystemSettings>\r\n      <ExternalSystemDebugServerProcess>false</ExternalSystemDebugServerProcess>\r\n      <ExternalSystemReattachDebugProcess>true</ExternalSystemReattachDebugProcess>\r\n      <DebugAllEnabled>false</DebugAllEnabled>\r\n      <RunAsTest>true</RunAsTest>\r\n      <method v=\"2\" />\r\n    </configuration>\r\n    <configuration name=\"JobTest\" type=\"JUnit\" factoryName=\"JUnit\">\r\n      <module name=\"techjobs-oo-java17-graded.test\" />\r\n      <option name=\"ALTERNATIVE_JRE_PATH_ENABLED\" value=\"true\" />\r\n      <option name=\"ALTERNATIVE_JRE_PATH\" value=\"17\" />\r\n      <option name=\"PACKAGE_NAME\" value=\"org.launchcode.techjobs.oo.test\" />\r\n      <option name=\"MAIN_CLASS_NAME\" value=\"org.launchcode.techjobs.oo.test.JobTest\" />\r\n      <option name=\"METHOD_NAME\" value=\"\" />\r\n      <option name=\"TEST_OBJECT\" value=\"class\" />\r\n      <method v=\"2\">\r\n        <option name=\"Make\" enabled=\"true\" />\r\n      </method>\r\n    </configuration>\r\n    <list>\r\n      <item itemvalue=\"Gradle.JobTest.testToStringContainsCorrectLabelsAndData\" />\r\n      <item itemvalue=\"Gradle.JobTest.testToStringHandlesEmptyField\" />\r\n      <item itemvalue=\"Gradle.JobTest\" />\r\n      <item itemvalue=\"Gradle.JobTest.testJobsForEquality\" />\r\n      <item itemvalue=\"Gradle.JobTest.testSettingJobId\" />\r\n      <item itemvalue=\"JUnit.JobTest\" />\r\n    </list>\r\n    <recent_temporary>\r\n      <list>\r\n        <item itemvalue=\"Gradle.JobTest\" />\r\n        <item itemvalue=\"Gradle.JobTest.testToStringHandlesEmptyField\" />\r\n        <item itemvalue=\"Gradle.JobTest.testToStringContainsCorrectLabelsAndData\" />\r\n        <item itemvalue=\"Gradle.JobTest.testJobsForEquality\" />\r\n        <item itemvalue=\"Gradle.JobTest.testSettingJobId\" />\r\n      </list>\r\n    </recent_temporary>\r\n  </component>\r\n  <component name=\"SpellCheckerSettings\" RuntimeDictionaries=\"0\" Folders=\"0\" CustomDictionaries=\"0\" DefaultDictionary=\"application-level\" UseSingleDictionary=\"true\" transferred=\"true\" />\r\n  <component name=\"TaskManager\">\r\n    <task active=\"true\" id=\"Default\" summary=\"Default task\">\r\n      <changelist id=\"59ff47a6-ece6-4e2e-b777-6247aa1f282e\" name=\"Changes\" comment=\"\" />\r\n      <created>1685977091317</created>\r\n      <option name=\"number\" value=\"Default\" />\r\n      <option name=\"presentableId\" value=\"Default\" />\r\n      <updated>1685977091317</updated>\r\n    </task>\r\n    <task id=\"LOCAL-00001\" summary=\"complete task #2\">\r\n      <option name=\"closed\" value=\"true\" />\r\n      <created>1695049546762</created>\r\n      <option name=\"number\" value=\"00001\" />\r\n      <option name=\"presentableId\" value=\"LOCAL-00001\" />\r\n      <option name=\"project\" value=\"LOCAL\" />\r\n      <updated>1695049546762</updated>\r\n    </task>\r\n    <task id=\"LOCAL-00002\" summary=\"complete task #3\">\r\n      <option name=\"closed\" value=\"true\" />\r\n      <created>1695053640184</created>\r\n      <option name=\"number\" value=\"00002\" />\r\n      <option name=\"presentableId\" value=\"LOCAL-00002\" />\r\n      <option name=\"project\" value=\"LOCAL\" />\r\n      <updated>1695053640184</updated>\r\n    </task>\r\n    <task id=\"LOCAL-00003\" summary=\"complete task #4\">\r\n      <option name=\"closed\" value=\"true\" />\r\n      <created>1695066742107</created>\r\n      <option name=\"number\" value=\"00003\" />\r\n      <option name=\"presentableId\" value=\"LOCAL-00003\" />\r\n      <option name=\"project\" value=\"LOCAL\" />\r\n      <updated>1695066742107</updated>\r\n    </task>\r\n    <task id=\"LOCAL-00004\" summary=\"complete task #5\">\r\n      <option name=\"closed\" value=\"true\" />\r\n      <created>1695141678997</created>\r\n      <option name=\"number\" value=\"00004\" />\r\n      <option name=\"presentableId\" value=\"LOCAL-00004\" />\r\n      <option name=\"project\" value=\"LOCAL\" />\r\n      <updated>1695141678997</updated>\r\n    </task>\r\n    <option name=\"localTasksCounter\" value=\"5\" />\r\n    <servers />\r\n  </component>\r\n  <component name=\"Vcs.Log.Tabs.Properties\">\r\n    <option name=\"RECENT_FILTERS\">\r\n      <map>\r\n        <entry key=\"Branch\">\r\n          <value>\r\n            <list>\r\n              <RecentGroup>\r\n                <option name=\"FILTER_VALUES\">\r\n                  <option value=\"main\" />\r\n                </option>\r\n              </RecentGroup>\r\n              <RecentGroup>\r\n                <option name=\"FILTER_VALUES\">\r\n                  <option value=\"HEAD\" />\r\n                </option>\r\n              </RecentGroup>\r\n            </list>\r\n          </value>\r\n        </entry>\r\n      </map>\r\n    </option>\r\n    <option name=\"TAB_STATES\">\r\n      <map>\r\n        <entry key=\"MAIN\">\r\n          <value>\r\n            <State>\r\n              <option name=\"CUSTOM_BOOLEAN_PROPERTIES\">\r\n                <map>\r\n                  <entry key=\"Show.Git.Branches\" value=\"true\" />\r\n                </map>\r\n              </option>\r\n              <option name=\"FILTERS\">\r\n                <map>\r\n                  <entry key=\"branch\">\r\n                    <value>\r\n                      <list>\r\n                        <option value=\"main\" />\r\n                      </list>\r\n                    </value>\r\n                  </entry>\r\n                </map>\r\n              </option>\r\n            </State>\r\n          </value>\r\n        </entry>\r\n      </map>\r\n    </option>\r\n  </component>\r\n  <component name=\"VcsManagerConfiguration\">\r\n    <MESSAGE value=\"complete task #2\" />\r\n    <MESSAGE value=\"complete task #3\" />\r\n    <MESSAGE value=\"complete task #4\" />\r\n    <MESSAGE value=\"complete task #5\" />\r\n    <option name=\"LAST_COMMIT_MESSAGE\" value=\"complete task #5\" />\r\n  </component>\r\n</project>
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+diff --git a/.idea/workspace.xml b/.idea/workspace.xml
+--- a/.idea/workspace.xml	(revision cffd095f8856f75fe6339a5b9cc0520ae991a7a5)
++++ b/.idea/workspace.xml	(date 1695660345273)
+@@ -4,13 +4,22 @@
+     <option name="autoReloadType" value="SELECTIVE" />
+   </component>
+   <component name="ChangeListManager">
+-    <list default="true" id="59ff47a6-ece6-4e2e-b777-6247aa1f282e" name="Changes" comment="complete task #5">
++    <list default="true" id="59ff47a6-ece6-4e2e-b777-6247aa1f282e" name="Changes" comment="DRY code by utilizing inheritance">
+       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+-      <change beforePath="$PROJECT_DIR$/src/main/java/org/launchcode/techjobs/oo/test/CoreCompetency.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/launchcode/techjobs/oo/test/CoreCompetency.java" afterDir="false" />
+-      <change beforePath="$PROJECT_DIR$/src/main/java/org/launchcode/techjobs/oo/test/Employer.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/launchcode/techjobs/oo/test/Employer.java" afterDir="false" />
+-      <change beforePath="$PROJECT_DIR$/src/main/java/org/launchcode/techjobs/oo/test/JobField.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/launchcode/techjobs/oo/test/JobField.java" afterDir="false" />
+-      <change beforePath="$PROJECT_DIR$/src/main/java/org/launchcode/techjobs/oo/test/Location.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/launchcode/techjobs/oo/test/Location.java" afterDir="false" />
+-      <change beforePath="$PROJECT_DIR$/src/main/java/org/launchcode/techjobs/oo/test/PositionType.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/launchcode/techjobs/oo/test/PositionType.java" afterDir="false" />
++      <change beforePath="$PROJECT_DIR$/build.gradle" beforeDir="false" afterPath="$PROJECT_DIR$/build.gradle" afterDir="false" />
++      <change beforePath="$PROJECT_DIR$/src/main/java/org/launchcode/techjobs/oo/test/CoreCompetency.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/launchcode/techjobs/oo/CoreCompetency.java" afterDir="false" />
++      <change beforePath="$PROJECT_DIR$/src/main/java/org/launchcode/techjobs/oo/test/Employer.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/launchcode/techjobs/oo/Employer.java" afterDir="false" />
++      <change beforePath="$PROJECT_DIR$/src/main/java/org/launchcode/techjobs/oo/test/Job.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/launchcode/techjobs/oo/Job.java" afterDir="false" />
++      <change beforePath="$PROJECT_DIR$/src/main/java/org/launchcode/techjobs/oo/test/JobField.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/launchcode/techjobs/oo/JobField.java" afterDir="false" />
++      <change beforePath="$PROJECT_DIR$/src/main/java/org/launchcode/techjobs/oo/test/Location.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/launchcode/techjobs/oo/Location.java" afterDir="false" />
++      <change beforePath="$PROJECT_DIR$/src/main/java/org/launchcode/techjobs/oo/test/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/launchcode/techjobs/oo/Main.java" afterDir="false" />
++      <change beforePath="$PROJECT_DIR$/src/main/java/org/launchcode/techjobs/oo/test/PositionType.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/launchcode/techjobs/oo/PositionType.java" afterDir="false" />
++      <change beforePath="$PROJECT_DIR$/src/test/java/org/launchcode/techjobs/oo/test/AbstractTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/org/launchcode/techjobs/oo/test/AbstractTest.java" afterDir="false" />
++      <change beforePath="$PROJECT_DIR$/src/test/java/org/launchcode/techjobs/oo/test/JobTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/org/launchcode/techjobs/oo/test/JobTest.java" afterDir="false" />
++      <change beforePath="$PROJECT_DIR$/src/test/java/org/launchcode/techjobs/oo/test/TestTaskFive.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/org/launchcode/techjobs/oo/test/TestTaskFive.java" afterDir="false" />
++      <change beforePath="$PROJECT_DIR$/src/test/java/org/launchcode/techjobs/oo/test/TestTaskFour.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/org/launchcode/techjobs/oo/test/TestTaskFour.java" afterDir="false" />
++      <change beforePath="$PROJECT_DIR$/src/test/java/org/launchcode/techjobs/oo/test/TestTaskThree.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/org/launchcode/techjobs/oo/test/TestTaskThree.java" afterDir="false" />
++      <change beforePath="$PROJECT_DIR$/src/test/java/org/launchcode/techjobs/oo/test/TestTaskTwo.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/org/launchcode/techjobs/oo/test/TestTaskTwo.java" afterDir="false" />
+     </list>
+     <option name="SHOW_DIALOG" value="false" />
+     <option name="HIGHLIGHT_CONFLICTS" value="true" />
+@@ -28,7 +37,12 @@
+         <task path="$PROJECT_DIR$">
+           <activation />
+         </task>
+-        <projects_view />
++        <projects_view>
++          <tree_state>
++            <expand />
++            <select />
++          </tree_state>
++        </projects_view>
+       </state>
+     </system>
+   </component>
+@@ -68,7 +82,20 @@
+     &quot;last_opened_file_path&quot;: &quot;C:/Users/chris/Documents/dev/LaunchCode/techjobs-oo-java-graded-17&quot;
+   }
+ }</component>
+-  <component name="RunManager" selected="Gradle.JobTest">
++  <component name="RunManager" selected="Gradle.Tests in 'org.launchcode.techjobs.oo.test'">
++    <configuration name="Main" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
++      <option name="MAIN_CLASS_NAME" value="org.launchcode.techjobs.oo.Main" />
++      <module name="techjobs-oo-java17-graded.main" />
++      <extension name="coverage">
++        <pattern>
++          <option name="PATTERN" value="org.launchcode.techjobs.oo.test.*" />
++          <option name="ENABLED" value="true" />
++        </pattern>
++      </extension>
++      <method v="2">
++        <option name="Make" enabled="true" />
++      </method>
++    </configuration>
+     <configuration name="JobTest" type="GradleRunConfiguration" factoryName="Gradle" temporary="true">
+       <ExternalSystemSettings>
+         <option name="executionName" />
+@@ -93,55 +120,7 @@
+       <RunAsTest>true</RunAsTest>
+       <method v="2" />
+     </configuration>
+-    <configuration name="JobTest.testJobsForEquality" type="GradleRunConfiguration" factoryName="Gradle" temporary="true">
+-      <ExternalSystemSettings>
+-        <option name="executionName" />
+-        <option name="externalProjectPath" value="$PROJECT_DIR$" />
+-        <option name="externalSystemIdString" value="GRADLE" />
+-        <option name="scriptParameters" value="" />
+-        <option name="taskDescriptions">
+-          <list />
+-        </option>
+-        <option name="taskNames">
+-          <list>
+-            <option value=":test" />
+-            <option value="--tests" />
+-            <option value="&quot;org.launchcode.techjobs.oo.test.JobTest.testJobsForEquality&quot;" />
+-          </list>
+-        </option>
+-        <option name="vmOptions" />
+-      </ExternalSystemSettings>
+-      <ExternalSystemDebugServerProcess>false</ExternalSystemDebugServerProcess>
+-      <ExternalSystemReattachDebugProcess>true</ExternalSystemReattachDebugProcess>
+-      <DebugAllEnabled>false</DebugAllEnabled>
+-      <RunAsTest>true</RunAsTest>
+-      <method v="2" />
+-    </configuration>
+-    <configuration name="JobTest.testSettingJobId" type="GradleRunConfiguration" factoryName="Gradle" temporary="true">
+-      <ExternalSystemSettings>
+-        <option name="executionName" />
+-        <option name="externalProjectPath" value="$PROJECT_DIR$" />
+-        <option name="externalSystemIdString" value="GRADLE" />
+-        <option name="scriptParameters" value="" />
+-        <option name="taskDescriptions">
+-          <list />
+-        </option>
+-        <option name="taskNames">
+-          <list>
+-            <option value=":test" />
+-            <option value="--tests" />
+-            <option value="&quot;org.launchcode.techjobs.oo.test.JobTest.testSettingJobId&quot;" />
+-          </list>
+-        </option>
+-        <option name="vmOptions" />
+-      </ExternalSystemSettings>
+-      <ExternalSystemDebugServerProcess>false</ExternalSystemDebugServerProcess>
+-      <ExternalSystemReattachDebugProcess>true</ExternalSystemReattachDebugProcess>
+-      <DebugAllEnabled>false</DebugAllEnabled>
+-      <RunAsTest>true</RunAsTest>
+-      <method v="2" />
+-    </configuration>
+-    <configuration name="JobTest.testToStringContainsCorrectLabelsAndData" type="GradleRunConfiguration" factoryName="Gradle" temporary="true">
++    <configuration name="Tests in 'org.launchcode.techjobs.oo.test'" type="GradleRunConfiguration" factoryName="Gradle" temporary="true">
+       <ExternalSystemSettings>
+         <option name="executionName" />
+         <option name="externalProjectPath" value="$PROJECT_DIR$" />
+@@ -154,7 +133,7 @@
+           <list>
+             <option value=":test" />
+             <option value="--tests" />
+-            <option value="&quot;org.launchcode.techjobs.oo.test.JobTest.testToStringContainsCorrectLabelsAndData&quot;" />
++            <option value="&quot;org.launchcode.techjobs.oo.test.*&quot;" />
+           </list>
+         </option>
+         <option name="vmOptions" />
+@@ -165,7 +144,7 @@
+       <RunAsTest>true</RunAsTest>
+       <method v="2" />
+     </configuration>
+-    <configuration name="JobTest.testToStringHandlesEmptyField" type="GradleRunConfiguration" factoryName="Gradle" temporary="true">
++    <configuration name="Tests in 'techjobs-oo-java17-graded.test'" type="GradleRunConfiguration" factoryName="Gradle" temporary="true">
+       <ExternalSystemSettings>
+         <option name="executionName" />
+         <option name="externalProjectPath" value="$PROJECT_DIR$" />
+@@ -177,8 +156,6 @@
+         <option name="taskNames">
+           <list>
+             <option value=":test" />
+-            <option value="--tests" />
+-            <option value="&quot;org.launchcode.techjobs.oo.test.JobTest.testToStringHandlesEmptyField&quot;" />
+           </list>
+         </option>
+         <option name="vmOptions" />
+@@ -197,25 +174,39 @@
+       <option name="MAIN_CLASS_NAME" value="org.launchcode.techjobs.oo.test.JobTest" />
+       <option name="METHOD_NAME" value="" />
+       <option name="TEST_OBJECT" value="class" />
++      <method v="2">
++        <option name="Make" enabled="true" />
++      </method>
++    </configuration>
++    <configuration name="org.launchcode.techjobs.oo in techjobs-oo-java17-graded.main" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
++      <module name="techjobs-oo-java17-graded.main" />
++      <extension name="coverage">
++        <pattern>
++          <option name="PATTERN" value="org.launchcode.techjobs.oo.test.*" />
++          <option name="ENABLED" value="true" />
++        </pattern>
++      </extension>
++      <option name="PACKAGE_NAME" value="org.launchcode.techjobs.oo" />
++      <option name="TEST_OBJECT" value="package" />
+       <method v="2">
+         <option name="Make" enabled="true" />
+       </method>
+     </configuration>
+     <list>
+-      <item itemvalue="Gradle.JobTest.testToStringContainsCorrectLabelsAndData" />
+-      <item itemvalue="Gradle.JobTest.testToStringHandlesEmptyField" />
++      <item itemvalue="Application.Main" />
++      <item itemvalue="Gradle.Tests in 'org.launchcode.techjobs.oo.test'" />
++      <item itemvalue="Gradle.Tests in 'techjobs-oo-java17-graded.test'" />
+       <item itemvalue="Gradle.JobTest" />
+-      <item itemvalue="Gradle.JobTest.testJobsForEquality" />
+-      <item itemvalue="Gradle.JobTest.testSettingJobId" />
+       <item itemvalue="JUnit.JobTest" />
++      <item itemvalue="JUnit.org.launchcode.techjobs.oo in techjobs-oo-java17-graded.main" />
+     </list>
+     <recent_temporary>
+       <list>
++        <item itemvalue="Gradle.Tests in 'org.launchcode.techjobs.oo.test'" />
++        <item itemvalue="JUnit.org.launchcode.techjobs.oo in techjobs-oo-java17-graded.main" />
++        <item itemvalue="Application.Main" />
++        <item itemvalue="Gradle.Tests in 'techjobs-oo-java17-graded.test'" />
+         <item itemvalue="Gradle.JobTest" />
+-        <item itemvalue="Gradle.JobTest.testToStringHandlesEmptyField" />
+-        <item itemvalue="Gradle.JobTest.testToStringContainsCorrectLabelsAndData" />
+-        <item itemvalue="Gradle.JobTest.testJobsForEquality" />
+-        <item itemvalue="Gradle.JobTest.testSettingJobId" />
+       </list>
+     </recent_temporary>
+   </component>
+@@ -260,7 +251,15 @@
+       <option name="project" value="LOCAL" />
+       <updated>1695141678997</updated>
+     </task>
+-    <option name="localTasksCounter" value="5" />
++    <task id="LOCAL-00005" summary="DRY code by utilizing inheritance">
++      <option name="closed" value="true" />
++      <created>1695144033084</created>
++      <option name="number" value="00005" />
++      <option name="presentableId" value="LOCAL-00005" />
++      <option name="project" value="LOCAL" />
++      <updated>1695144033084</updated>
++    </task>
++    <option name="localTasksCounter" value="6" />
+     <servers />
+   </component>
+   <component name="Vcs.Log.Tabs.Properties">
+@@ -316,6 +315,8 @@
+     <MESSAGE value="complete task #3" />
+     <MESSAGE value="complete task #4" />
+     <MESSAGE value="complete task #5" />
+-    <option name="LAST_COMMIT_MESSAGE" value="complete task #5" />
++    <MESSAGE value="complete final task" />
++    <MESSAGE value="DRY code by utilizing inheritance" />
++    <option name="LAST_COMMIT_MESSAGE" value="DRY code by utilizing inheritance" />
+   </component>
+ </project>
+\ No newline at end of file
